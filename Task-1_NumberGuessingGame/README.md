@@ -78,3 +78,7 @@ Enter your guess: 17
 🎉 CONGRATULATIONS! You guessed it in 3 attempts.
 ```
 ---
+💬 “Keep guessing... until you get it right — just like learning!”
+
+---
+
