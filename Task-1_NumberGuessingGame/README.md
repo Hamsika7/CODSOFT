@@ -119,3 +119,7 @@ Task-1_EnhancedNumberGuessingGame/
 - Efficient control structures and scoring logic
 ---
 💬 “Keep guessing... until you get it right — just like learning!”
+
+---
+## 📌 Tags
+`#C++` `#NumberGuessingGame` `#ConsoleApp` `#BeginnerFriendly` `#LogicBuilding`
