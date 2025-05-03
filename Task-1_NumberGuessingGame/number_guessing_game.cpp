@@ -1,45 +1,80 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <vector>
+using namespace std;
 
-int main() {
-    int lower, upper;      // Range boundaries
-    int target, guess;     // Random number and user's guess
-    int attempts = 0;      // To count number of attempts
+int chooseDifficulty() {
+    int level, maxNum;
+    cout << "\nChoose Difficulty Level:\n";
+    cout << "1. Easy (1 - 10)\n";
+    cout << "2. Medium (1 - 100)\n";
+    cout << "3. Hard (1 - 1000)\n";
+    cout << "Enter your choice: ";
+    cin >> level;
 
-    // Ask the user to enter the desired range
-    printf("Enter the lower and upper limits for the number: ");
-    scanf("%d %d", &lower, &upper);
-
-    // Seed the random number generator with current time
-    srand(time(NULL));
-
-    // Generate a random number in the user-defined range
-    target = rand() % (upper - lower + 1) + lower;
-
-    // Welcome message
-    printf("🎯 Welcome to the Number Guessing Game!\n");
-    printf("I have picked a number between %d and %d.\n", lower, upper);
-    printf("Can you guess it?\n");
-
-    // Infinite loop until the correct guess is made
-    while (1) {
-        printf("Enter your guess: ");
-        scanf("%d", &guess);
-        attempts++;
-
-        // Give feedback based on the guess
-        if (guess > target)
-            printf("TOO HIGH 🔺\nTry again...\n");
-        else if (guess < target)
-            printf("TOO LOW 🔻\nTry again...\n");
-        else {
-            // Correct guess
-            printf("🎉 CONGRATULATIONS! You guessed it in %d attempts.\n", attempts);
-            break;
-        }
+    switch (level) {
+        case 1: maxNum = 10; break;
+        case 2: maxNum = 100; break;
+        case 3: maxNum = 1000; break;
+        default: cout << "Invalid choice! Defaulting to Medium.\n"; maxNum = 100;
     }
-
-    return 0;
+    return maxNum;
 }
 
+void playGame() {
+    srand(time(0));
+    int maxNum = chooseDifficulty();
+    int number = rand() % maxNum + 1;
+    int guess, attempts = 0, maxAttempts = 10;
+    vector<int> history;
+
+    cout << "\nYou have " << maxAttempts << " attempts to guess the number!\n";
+
+    while (attempts < maxAttempts) {
+        cout << "\nAttempt " << (attempts + 1) << " - Enter your guess: ";
+        cin >> guess;
+        history.push_back(guess);
+        attempts++;
+
+        if (guess == number) {
+            cout << "🎉 Correct! You guessed it in " << attempts << " tries.\n";
+            cout << "Your Score: " << (100 - attempts * 10) << endl;
+            break;
+        } else if (guess < number) {
+            cout << "Too low!";
+        } else {
+            cout << "Too high!";
+        }
+
+        // Hint system
+        if (attempts == 3 || attempts == 5) {
+            if (number % 2 == 0)
+                cout << " (Hint: It's an even number)";
+            else
+                cout << " (Hint: It's an odd number)";
+        }
+
+        // Show history
+        cout << "\nPrevious guesses: ";
+        for (int g : history) cout << g << " ";
+        cout << endl;
+    }
+
+    if (guess != number) {
+        cout << "\n💥 You've used all attempts. The number was: " << number << "\n";
+    }
+}
+
+int main() {
+    char playAgain;
+    do {
+        cout << "\n🎮 Starting New Game...\n";
+        playGame();
+        cout << "\nDo you want to play again? (y/n): ";
+        cin >> playAgain;
+    } while (playAgain == 'y' || playAgain == 'Y');
+
+    cout << "\n👋 Thanks for playing. Goodbye!\n";
+    return 0;
+}
