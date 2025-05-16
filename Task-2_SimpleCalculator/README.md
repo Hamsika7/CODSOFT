@@ -6,17 +6,17 @@ A command-line C++ calculator that allows users to perform **basic arithmetic op
 
 ## 📌 Features
 
-- ✅ Addition, Subtraction, Multiplication, Division
-- ✅ User-friendly interface with colorful output
-- ✅ Robust error handling for invalid inputs and division by zero
-- ✅ Continuous operation until user chooses to exit
+- Addition, Subtraction, Multiplication, Division
+- User-friendly interface with colorful output
+- Robust error handling for invalid inputs and division by zero
+- Continuous operation until user chooses to exit
 
 ---
 
 ## 🚀 How to Run
 
 ### 🧾 Prerequisites
-- C++ Compiler (like `g++`)
+C++ Compiler (like `g++`)
 
 ### 💻 Steps
 
