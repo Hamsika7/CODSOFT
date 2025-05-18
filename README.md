@@ -44,8 +44,8 @@ program.exe # Windows
 - **Email**: hamsikassnn2004@gmail.com
 - **GitHub**: [Hamsika](https://github.com/Hamsika7)
 
-## License
+## 🔑 License
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/Hamsika7/CODSOFT/blob/main/LICENSE) file for details.
----
 
+---
 Created as part of the CODSOFT internship program | #codsoft #cppprogramming #internship
