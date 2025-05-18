@@ -37,12 +37,12 @@ program.exe # Windows
 ## 📷 Demo Links
 
 - All project demonstration videos are available on my LinkedIn profile
-- LinkedIn: [Your Profile](https://linkedin.com/in/hamsika7/)
+- LinkedIn: [Hamsika](https://linkedin.com/in/hamsika7/)
 
 ## 📞 Contact
 
 - **Email**: hamsikassnn2004@gmail.com
-- **GitHub**: [Your GitHub Profile](https://github.com/Hamsika7)
+- **GitHub**: [Hamsika](https://github.com/Hamsika7)
 
 ---
 
