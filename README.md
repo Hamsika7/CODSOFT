@@ -41,7 +41,7 @@ program.exe # Windows
 
 ## 📞 Contact
 
-- **Email**: your.email@example.com
+- **Email**: hamsikassnn2004@gmail.com
 - **GitHub**: [Your GitHub Profile](https://github.com/Hamsika7)
 
 ---
