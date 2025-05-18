@@ -91,7 +91,7 @@ Title: Clean Code, Author: Robert C. Martin, ISBN: 9780132350884 (Available)
 | `showBooks()` | Displays all books in the library inventory |
 
 ---
-### Control Flow
+### 📜 Control Flow
 
 1. The main loop displays the menu until the user chooses to exit
 2. Each menu option calls the corresponding Library class method
